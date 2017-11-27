@@ -1,8 +1,13 @@
 # JOSH (JavaScript Object Style Helper)
 A vanilla JavaScript helper to parse JSON into CSS.
 
+## Getting started
+
+### Requirements
+- None
+
 ### Installing
-- ***Coming soon...***
+- Download the latest release of JOSH [here]("https://github.com/Bikossor/JOSH/releases/latest"). Paste JOSH into your script and you are done! :D
 
 ### Using JOSH
 ```html
@@ -27,6 +32,15 @@ A vanilla JavaScript helper to parse JSON into CSS.
     headElement.appendChild(styleElement);
 </script>
 ```
+
+## Versioning
+I am using [Semantic Versioning 2.0.0](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Bikossor/JOSH/tags).
+
+## Authors
+- André Lichtenthäler ([Bikossor](https://bikossor.de)) - *Initial work*
+
+## License
+This project is licensed under the GPL-3.0 License. See the [LICENSE.md](LICENSE.md) file for more details.
 
 ## Changelog
 ### Version 0.1.0 (27th November, 2017)
