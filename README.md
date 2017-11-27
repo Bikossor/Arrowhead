@@ -40,7 +40,7 @@ I am using [Semantic Versioning 2.0.0](http://semver.org/) for versioning. For t
 - André Lichtenthäler ([Bikossor](https://bikossor.de)) - *Initial work*
 
 ## License
-This project is licensed under the GPL-3.0 License. See the [LICENSE.md](LICENSE.md) file for more details.
+This project is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for more details.
 
 ## Changelog
 ### Version 0.1.0 (27th November, 2017)
