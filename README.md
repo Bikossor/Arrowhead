@@ -7,7 +7,7 @@ A vanilla JavaScript helper to parse JSON into CSS.
 - None
 
 ### Installing
-- Download the latest release of JOSH [here]("https://github.com/Bikossor/JOSH/releases/latest"). Paste JOSH into your script and you are done! :D
+- Download the latest release of JOSH [here](https://github.com/Bikossor/JOSH/releases/latest). Paste JOSH into your script and you are done! :D
 
 ### Using JOSH
 ```html
