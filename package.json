@@ -1,12 +1,22 @@
 {
-    "name": "josh",
-    "description": "A vanilla JavaScript helper to parse JSON into CSS.",
-    "author": "André Lichtenthäler",
-    "version": "0.0.1",
-    "devDependencies": {
-      "jshint": "^2.6.0"
-    },
-    "scripts": {
-      "test": "./node_modules/jshint/bin/jshint ./tests/test1.js"
-    }
+  "author": "André Lichtenthäler",
+  "name": "josh",
+  "description": "A vanilla JavaScript helper to parse JSON into CSS.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Bikossor/JOSH",
+  "main": "./src/JOSH-0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Bikossor/JOSH.git"
+  },
+  "scripts": {
+    "test": "vows --spec"
+  },
+  "engines": {
+    "node": ">= 0.4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vows": "0.6.x"
   }
+}
