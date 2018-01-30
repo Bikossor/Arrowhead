@@ -3,7 +3,7 @@ var JOSH = (function() {
   
   return {
     parse: function(args) {
-      if (typeof(args) != "object") return;
+      if (args && typeof(args) != "object") return;
       
       var css = "";
       
