@@ -7,25 +7,80 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Hello World!</h1>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <div class="test1">
+        <h2>Foo</h2>
+        <h3>Bar</h3>
+    </div>
+    <div class="box red"></div>
+    <div class="box yellow"></div>
+    <div class="box orange"></div>
+    <div class="box purple"></div>
+    <div class="box lime"></div>
+    <div class="box blue"></div>
     <script src="../src/JOSHP.js"></script>
     <script>
-        var t0 = performance.now();
-        JOSH.parse({
-            "#foo": {
-                "position": "fixed",
-                "top": 0,
-                "left": 0,
-                "background": "#ddd",
-                "width": "100%",
-                "height": "4rem"
-            },
-            ".bar": {
-                "color": "red",
-                "background": "#808080"
-            }
-        });
-        var t1 = performance.now();
-        console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+        var results = [];
+
+        for(var i = 0; i < 10000; i++) {
+            var t0 = performance.now();
+
+            JOSH.parse({
+                "h1": {
+                    "color": "red",
+                    "background": "#ddd",
+                    "text-shadow": "3px 3px 3px rgba(0,0,0,0.5)"
+                },
+                "p": {
+                    "color": "blue",
+                    "background": "#808080"
+                },
+                ".test1": {
+                    "color": "pink",
+                    "background": "yellow",
+                    "box-shadow": "2px 2px 2px #000"
+                },
+                "h3": {
+                    "color": "#0f0"
+                },
+                ".box": {
+                    "width": "120px",
+                    "height": "120px",
+                    "display": "inline-block"
+                },
+                ".box.red": {
+                    "background": "red"
+                },
+                ".box.yellow": {
+                    "background": "yellow"
+                },
+                ".box.orange": {
+                    "background": "orange"
+                },
+                ".box.purple": {
+                    "background": "purple"
+                },
+                ".box.lime": {
+                    "background": "lime"
+                },
+                ".box.blue": {
+                    "background": "blue"
+                }
+            });
+            var t1 = performance.now();
+
+            results.push(parseFloat(t1 - t0));
+        }
+
+        function getAvg(grades) {
+            return grades.reduce(function (p, c) {
+                return p + c;
+            }) / grades.length;
+        };
+
+        console.log(getAvg(results).toFixed(5));
+
     </script>
 </body>
 </html>
