@@ -12,10 +12,11 @@
     "url": "git://github.com/Bikossor/JOSH.git"
   },
   "scripts": {
-    "build": "uglifyjs src/JOSH.js --output dist/JOSH.min.js --compress --mangle"
+    "build": "npx babel src/JOSH.js --out-file dist/JOSH.min.js --eval --presets=minify"
   },
   "devDependencies": {
-    "semver": "^5.5.0",
-    "uglify-js": "^3.3.8"
+    "babel-cli": "^6.26.0",
+    "babel-preset-minify": "^0.2.0",
+    "npx": "^9.7.1"
   }
 }
