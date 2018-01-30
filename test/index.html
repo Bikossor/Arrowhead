@@ -9,6 +9,7 @@
 <body>
     <script src="../src/JOSHP.js"></script>
     <script>
+        var t0 = performance.now();
         JOSH.parse({
             "#foo": {
                 "position": "fixed",
@@ -21,7 +22,10 @@
             ".bar": {
                 "color": "red",
                 "background": "#808080"
-            }});
+            }
+        });
+        var t1 = performance.now();
+        console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
     </script>
 </body>
 </html>

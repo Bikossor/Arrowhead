@@ -5,20 +5,15 @@ var JOSH = (function() {
     parse: function(args) {
       if (typeof(args) != "object") return;
       
-      var styleElement = document.createElement('style'), css = "", styleSheet;
+      var styleElement = document.createElement('style'), css = "", styleSheet, cssSelectors;
+
+      cssSelectors = Object.keys(args);
 
       document.head.appendChild(styleElement);
       styleSheet = styleElement.sheet;      
-      styleSheet.insertRule("* { background: red }");
       
-      for (var selector in args) {
-        css += selector + "{";
-
-        for (var attribute in args[selector]) {
-          css += attribute + ":" + args[selector][attribute] + ";";
-        }
-
-        css += "}";
+      for(var i = 0; i < cssSelectors.length; i++) {
+        styleSheet.insertRule(cssSelectors[i] + JSON.stringify(args[cssSelectors[i]]));
       }
       
       return css;
