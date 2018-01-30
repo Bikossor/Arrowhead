@@ -3,20 +3,19 @@ var JOSH = (function() {
   
   return {
     parse: function(args) {
-      if (typeof(args) != "object") return;
+      if (args && typeof(args) != "object") return;
       
-      var styleElement = document.createElement('style'), css = "", styleSheet, cssSelectors;
-
-      cssSelectors = Object.keys(args);
-
+      var styleElement = document.createElement("style");
+      
       document.head.appendChild(styleElement);
-      styleSheet = styleElement.sheet;      
+      var styleSheet = styleElement.sheet;
       
-      for(var i = 0; i < cssSelectors.length; i++) {
-        styleSheet.insertRule(cssSelectors[i] + JSON.stringify(args[cssSelectors[i]]));
+      for (var selector in args) {
+        for (var attribute in args[selector]) {
+          var rule = selector + "{" + attribute + ":" + args[selector][attribute] + "}";
+          styleSheet.insertRule(rule);
+        }
       }
-      
-      return css;
     }
   };
 })();
