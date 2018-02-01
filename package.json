@@ -12,11 +12,13 @@
     "url": "git://github.com/Bikossor/JOSH.git"
   },
   "scripts": {
+    "test": "mocha",
     "build": "npx babel src/JOSH.js --out-file dist/JOSH.min.js --eval --presets=minify"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-minify": "^0.2.0",
+    "mocha": "^5.0.0",
     "npx": "^9.7.1"
   }
 }
