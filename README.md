@@ -3,6 +3,9 @@
 # JOSH (JavaScript Object Style Helper)
 A vanilla JavaScript helper to parse JSON into CSS.
 
+## Why using JOSH?
+JOSH is a great helper for any web-project which uses CSS. With JOSH you can include your CSS either as JSON or as a string right into your HTML or JavaScript without having an additional server-request for your CSS. The result is that you just have to keep track to fewer files and even the performance of your web-project benefits too.
+
 ## Getting started
 
 ### Requirements
