@@ -3,21 +3,32 @@ var JOSH = (function() {
   
   return {
     parse: function(args) {
-      if (args && typeof(args) != "object") return;
-      
-      var css = "";
-      
-      for (var selector in args) {
-        css += selector + "{";
+      if (!args) throw "[JOSH]: No arguments!";
 
-        for (var attribute in args[selector]) {
-          css += attribute + ":" + args[selector][attribute] + ";";
-        }
+      var result = "";
+      
+      switch (typeof(args)) {
+        case "object":
+        
+          for (var selector in args) {
+            result += selector + "{";
+    
+            for (var attribute in args[selector]) {
+              result += attribute + ":" + args[selector][attribute] + ";";
+            }
+    
+            result += "}";
+          }
+          
+          return result;  
+        break;
+        case "string":
 
-        css += "}";
+        break;
+        default:
+          throw "[JOSH]: Invalid arguments!";
+        break;
       }
-      
-      return css;
     }
   };
 })();
