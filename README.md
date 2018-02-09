@@ -11,14 +11,12 @@ A vanilla JavaScript helper to parse JSON into CSS.
 ### Installing
 - Download the latest release of JOSH [here](https://github.com/Bikossor/JOSH/releases/latest). Paste JOSH into your script and you are done! :D
 
-### Using JOSH
+### Using JOSH with JSON
 ```html
 <script>
     /* Copy JOSH in your JavaScript! */
 
-    var headElement = document.getElementsByTagName("head")[0];
-    var styleElement = document.createElement("style");
-    styleElement.innerHTML = JOSH.parse({
+    JOSH.parse({
         "#foo": {
             "position": "fixed",
             "top": 0,
@@ -30,8 +28,17 @@ A vanilla JavaScript helper to parse JSON into CSS.
         ".bar": {
             "color": "red",
             "background": "#808080"
-        }});
-    headElement.appendChild(styleElement);
+        }
+    });
+</script>
+```
+
+### Using JOSH with strings
+```html
+<script>
+    /* Copy JOSH in your JavaScript! */
+
+    JOSH.parse("#foo{position:fixed;top:0;left:0;background:#ddd;width:100%;height:4rem;}.bar{color:red;background:#808080;}");
 </script>
 ```
 
