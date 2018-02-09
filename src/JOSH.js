@@ -12,7 +12,7 @@ var JOSH = (function() {
       _element = _document.body;
     }
     else {
-      throw "[JOSH]: Unrecognized target!";
+      return false;
     }
     
     _stylesheet = _document.createElement("style");
@@ -23,7 +23,7 @@ var JOSH = (function() {
   return {
     parse: function(args, target = "head") {
       _target = target.toLowerCase();
-      if (!args) throw "[JOSH]: No arguments!";
+      if (!args) return false;
 
       var result = "";
       
@@ -44,8 +44,9 @@ var JOSH = (function() {
         _append(args);
       }
       else {
-        throw "[JOSH]: Invalid arguments!";
+        return false;
       }
     }
   };
 })();
+module.exports = JOSH;
