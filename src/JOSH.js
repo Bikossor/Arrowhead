@@ -3,16 +3,14 @@ var JOSH = (function() {
   
   var _target, _element, _stylesheet;
   var _append = function(x) {
-    switch (_target) {
-      case "head":
-        _element = document.head;
-      break;
-      case "body":
-        _element = document.body;
-      break;
-      default:
-        throw "[JOSH]: Unrecognized target!"
-      break;
+    if (_target == "head") {
+      _element = document.head;
+    }
+    else if (_target == "body") {
+      _element = document.body;
+    }
+    else {
+      throw "[JOSH]: Unrecognized target!";
     }
     
     _stylesheet = document.createElement("style");
@@ -27,27 +25,24 @@ var JOSH = (function() {
 
       var result = "";
       
-      switch (typeof args) {
-        case "object":
-        
-          for (var selector in args) {
-            result += selector + "{";
-    
-            for (var attribute in args[selector]) {
-              result += attribute + ":" + args[selector][attribute] + ";";
-            }
-    
-            result += "}";
+      if (typeof args == "object") {
+        for (var selector in args) {
+          result += selector + "{";
+  
+          for (var attribute in args[selector]) {
+            result += attribute + ":" + args[selector][attribute] + ";";
           }
-          
-          _append(result);
-        break;
-        case "string":
-          _append(args);
-        break;
-        default:
-          throw "[JOSH]: Invalid arguments!";
-        break;
+  
+          result += "}";
+        }
+        
+        _append(result);
+      }
+      else if (typeof args == "string") {
+        _append(args);
+      }
+      else {
+        throw "[JOSH]: Invalid arguments!";
       }
     }
   };
