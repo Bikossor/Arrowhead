@@ -1,13 +1,33 @@
 var JOSH = (function() {
   "use strict";
   
+  var _target, _element, _stylesheet;
+  var _append = function(x) {
+    switch (_target) {
+      case "head":
+        _element = document.head;
+      break;
+      case "body":
+        _element = document.body;
+      break;
+      default:
+        throw "[JOSH]: Unrecognized target!"
+      break;
+    }
+    
+    _stylesheet = document.createElement("style");
+    _stylesheet.innerHTML = x;
+    _element.appendChild(_stylesheet);
+  }
+
   return {
-    parse: function(args) {
+    parse: function(args, target = "head") {
+      _target = target.toLowerCase();
       if (!args) throw "[JOSH]: No arguments!";
 
       var result = "";
       
-      switch (typeof(args)) {
+      switch (typeof args) {
         case "object":
         
           for (var selector in args) {
@@ -20,10 +40,10 @@ var JOSH = (function() {
             result += "}";
           }
           
-          return result;  
+          _append(result);
         break;
         case "string":
-
+          _append(args);
         break;
         default:
           throw "[JOSH]: Invalid arguments!";
