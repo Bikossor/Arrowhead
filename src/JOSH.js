@@ -1,20 +1,22 @@
 var JOSH = (function() {
   "use strict";
   
-  var _target, _element, _stylesheet;
-  var _append = function(x) {
+  var _target, _element, _stylesheet, _document;
+  _document = document;
+
+  var _append = function(css) {
     if (_target == "head") {
-      _element = document.head;
+      _element = _document.head;
     }
     else if (_target == "body") {
-      _element = document.body;
+      _element = _document.body;
     }
     else {
       throw "[JOSH]: Unrecognized target!";
     }
     
-    _stylesheet = document.createElement("style");
-    _stylesheet.innerHTML = x;
+    _stylesheet = _document.createElement("style");
+    _stylesheet.innerHTML = css;
     _element.appendChild(_stylesheet);
   }
 
