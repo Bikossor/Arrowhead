@@ -17,31 +17,31 @@ JOSH is a great helper for any web-project which uses CSS. With JOSH you can inc
 ### Using JOSH with JSON
 ```html
 <script>
-    /* Copy JOSH in your JavaScript! */
+  /* Copy JOSH in your JavaScript! */
 
-    JOSH.parse({
-        "#foo": {
-            "position": "fixed",
-            "top": 0,
-            "left": 0,
-            "background": "#ddd",
-            "width": "100%",
-            "height": "4rem"
-        },
-        ".bar": {
-            "color": "red",
-            "background": "#808080"
-        }
-    });
+  JOSH.parse({
+    "#foo": {
+      "position": "fixed",
+      "top": 0,
+      "left": 0,
+      "background": "#ddd",
+      "width": "100%",
+      "height": "4rem"
+    },
+    ".bar": {
+      "color": "red",
+      "background": "#808080"
+    }
+  });
 </script>
 ```
 
 ### Using JOSH with strings
 ```html
 <script>
-    /* Copy JOSH in your JavaScript! */
+  /* Copy JOSH in your JavaScript! */
 
-    JOSH.parse("#foo{position:fixed;top:0;left:0;background:#ddd;width:100%;height:4rem;}.bar{color:red;background:#808080;}");
+  JOSH.parse("#foo{position:fixed;top:0;left:0;background:#ddd;width:100%;height:4rem;}.bar{color:red;background:#808080;}");
 </script>
 ```
 
@@ -55,6 +55,11 @@ I am using [Semantic Versioning 2.0.0](http://semver.org/) for versioning. For t
 This project is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for more details.
 
 ## Changelog
+### Version 1.0.0 (8th February, 2018)
+- [Added] Auto-appending to either `head` or `body` (Default: `head`)
+- [Added] Support for css-string
+- [Improved] Error checking
+
 ### Version 0.1.0 (27th November, 2017)
 - First introduction of JOSH
 

@@ -1,8 +1,7 @@
 var JOSH = (function() {
   "use strict";
   
-  var _target, _element, _stylesheet, _document;
-  _document = document;
+  var _target, _element, _document = document, _stylesheet = _document.createElement("style");
 
   var _append = function(css) {
     if (_target == "head") {
@@ -12,10 +11,9 @@ var JOSH = (function() {
       _element = _document.body;
     }
     else {
-      return false;
+      throw new Error();
     }
     
-    _stylesheet = _document.createElement("style");
     _stylesheet.innerHTML = css;
     _element.appendChild(_stylesheet);
   }
@@ -23,11 +21,11 @@ var JOSH = (function() {
   return {
     parse: function(args, target = "head") {
       _target = target.toLowerCase();
-      if (!args) return false;
+      if (!args) throw new Error();
 
       var result = "";
       
-      if (typeof args == "object") {
+      if (typeof args == "object" && args.length >= 1) {
         for (var selector in args) {
           result += selector + "{";
   
@@ -44,8 +42,9 @@ var JOSH = (function() {
         _append(args);
       }
       else {
-        return false;
+        throw new Error()
       }
+      return true;
     }
   };
 })();
