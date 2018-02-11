@@ -1,38 +1,68 @@
 const JOSH = require('../src/JOSH');
-const testCSS = "#foo{position:fixed;top:0;left:0;background:#ddd;width:100%;height:4rem;}.bar{color:red;background:#808080;}";
+const css = "#foo{position:fixed;top:0;left:0;background:#ddd;width:100%;height:4rem;}.bar{color:red;background:#808080;}";
 
-test('No explicit target should be undefined', () => {
-  expect(JOSH.parse(testCSS)).toBeUndefined();
+test('No explicit target should be true', () => {
+  expect(JOSH.parse(css)).toBeTruthy();
 });
 
-test('Target "head" should be undefined', () => {
-  expect(JOSH.parse(testCSS, "head")).toBeUndefined();
+test('Target "head" should be true', () => {
+  expect(JOSH.parse(css, "head")).toBeTruthy();
 });
 
-test('Target "body" should be undefined', () => {
-  expect(JOSH.parse(testCSS, "body")).toBeUndefined();
+test('Target "body" should be true', () => {
+  expect(JOSH.parse(css, "body")).toBeTruthy();
 });
 
-test('Target "test" should be false', () => {
-  expect(JOSH.parse(testCSS, "test")).toBeFalsy();
+test('Target "test" should throw error', () => {
+  expect(() => {
+    JOSH.parse(css, "test");
+  }).toThrow();
 });
 
-test('Empty string should be false', () => {
-  expect(JOSH.parse("")).toBeFalsy();
+test('Target null should throw error', () => {
+  expect(() => {
+    JOSH.parse(css, null);
+  }).toThrow();
 });
 
-test('Empty object should be false', () => {
-  expect(JOSH.parse({})).toBeFalsy();
+test('Empty string should throw error', () => {
+  expect(() => {
+    JOSH.parse("");
+  }).toThrow();
 });
 
-test('Integer should be false', () => {
-  expect(JOSH.parse(1337)).toBeFalsy();
+test('Empty object should throw error', () => {
+  expect(() => {
+    JOSH.parse({});
+  }).toThrow();
 });
 
-test('Boolean should be false', () => {
-  expect(JOSH.parse(true)).toBeFalsy();
+test('Integer should throw error', () => {
+  expect(() => {
+    JOSH.parse(1337);
+  }).toThrow();
 });
 
-test('Float should be false', () => {
-  expect(JOSH.parse(13.37)).toBeFalsy();
+test('Boolean should throw error', () => {
+  expect(() => {
+    JOSH.parse(true);
+  }).toThrow();
+});
+
+test('Float should throw error', () => {
+  expect(() => {
+    JOSH.parse(13.37);
+  }).toThrow();
+});
+
+test('Null should throw error', () => {
+  expect(() => {
+    JOSH.parse(null);
+  }).toThrow();
+});
+
+test('Undefined should throw error', () => {
+  expect(() => {
+    JOSH.parse(undefined);
+  }).toThrow();
 });
