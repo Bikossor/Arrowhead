@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/Bikossor/JOSH.svg?branch=master)](https://travis-ci.org/Bikossor/JOSH)
+[![Github Releases](https://img.shields.io/github/downloads/bikossor/josh/latest/total.svg)]()
+[![GitHub release](https://img.shields.io/github/release/bikossor/josh.svg)]()
 
 # JOSH (JavaScript Object Style Helper)
 A vanilla JavaScript helper to parse JSON into CSS.
