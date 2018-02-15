@@ -1,6 +1,6 @@
 {
   "author": "André Lichtenthäler",
-  "name": "josh",
+  "name": "@bikossor/josh",
   "description": "A vanilla JavaScript helper to parse JSON into CSS.",
   "version": "1.0.0",
   "homepage": "https://github.com/Bikossor/JOSH",
