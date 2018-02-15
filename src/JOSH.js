@@ -1,8 +1,20 @@
+/**
+ * @author André Lichtenthäler
+ * @license GPL-3.0
+ * @name JOSH
+ * @version 1.0.0
+ */
+
 var JOSH = (function() {
   "use strict";
   
   var _target, _element, _document = document, _stylesheet = _document.createElement("style");
 
+  /**
+   * Appends a css-string to either the head or the body.
+   * @private
+   * @param {string} css 
+   */
   var _append = function(css) {
     if (_target == "head") {
       _element = _document.head;
@@ -19,6 +31,13 @@ var JOSH = (function() {
   }
 
   return {
+    /** Parses either a string or an object to css.
+     * @public
+     * @since 0.1.0
+     * @param {string|object} args
+     * @param {string} [target]
+     * @returns {!boolean}
+     */
     parse: function(args, target = "head") {
       _target = target.toLowerCase();
       if (!args) throw new Error();
