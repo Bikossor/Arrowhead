@@ -13,8 +13,13 @@ JOSH is a great helper for any web-project which uses CSS. With JOSH you can inc
 ### Requirements
 - None
 
-### Installing
-- Download the latest release of JOSH [here](https://github.com/Bikossor/JOSH/releases/latest). Paste JOSH into your script and you are done! :D
+### Installing via npm
+```
+npm install @bikossor/josh
+```
+
+### Installing without npm
+- Download the latest release of JOSH [here](https://github.com/Bikossor/JOSH/releases/latest). Paste JOSH into your script and you are done.
 
 ### Using JOSH with JSON
 ```html
