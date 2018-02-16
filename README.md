@@ -3,6 +3,7 @@
 [![GitHub release](https://img.shields.io/github/release/bikossor/josh.svg)]()
 [![Size](http://img.badgesize.io/https://raw.githubusercontent.com/Bikossor/JOSH/master/dist/JOSH.min.js.svg)]()
 [![Gzip size](http://img.badgesize.io/https://raw.githubusercontent.com/Bikossor/JOSH/master/dist/JOSH.min.js.svg?compression=gzip)]()
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6920feb9d5bd4beba85d3f479d61b306)](https://www.codacy.com/app/Bikossor/JOSH?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Bikossor/JOSH&amp;utm_campaign=Badge_Grade)
 
 # JOSH (JavaScript Object Style Helper)
 A vanilla JavaScript helper to parse JSON into CSS.
