@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5afaa0faf2074eeba510bfa12cf53eb1)](https://app.codacy.com/app/Bikossor/JOSH?utm_source=github.com&utm_medium=referral&utm_content=Bikossor/JOSH&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/Bikossor/JOSH.svg?branch=master)](https://travis-ci.org/Bikossor/JOSH)
 [![Github Releases](https://img.shields.io/github/downloads/bikossor/josh/latest/total.svg)]()
 [![GitHub release](https://img.shields.io/github/release/bikossor/josh.svg)]()
