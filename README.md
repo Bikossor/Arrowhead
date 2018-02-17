@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Bikossor/JOSH.svg?branch=master)](https://travis-ci.org/Bikossor/JOSH)
-[![Github Releases](https://img.shields.io/github/downloads/bikossor/josh/latest/total.svg)]()
+[![npm](https://img.shields.io/npm/dt/@bikossor/josh.svg)](https://www.npmjs.com/package/@bikossor/josh)
 [![GitHub release](https://img.shields.io/github/release/bikossor/josh.svg)]()
 [![Size](http://img.badgesize.io/https://raw.githubusercontent.com/Bikossor/JOSH/master/dist/JOSH.min.js.svg)]()
 [![Gzip size](http://img.badgesize.io/https://raw.githubusercontent.com/Bikossor/JOSH/master/dist/JOSH.min.js.svg?compression=gzip)]()
