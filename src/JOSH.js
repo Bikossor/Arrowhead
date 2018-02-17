@@ -16,17 +16,17 @@ var JOSH = (function() {
    * @param {string} css 
    */
   var _append = function(css) {
-    if (_target == "head") {
+    if (_target === "head") {
       _element = _document.head;
     }
-    else if (_target == "body") {
+    else if (_target === "body") {
       _element = _document.body;
     }
     else {
       throw new Error();
     }
     
-    _stylesheet.innerHTML = css;
+    _stylesheet.textContent = css;
     _element.appendChild(_stylesheet);
   }
 
@@ -44,7 +44,7 @@ var JOSH = (function() {
 
       var result = "";
       
-      if (typeof args == "object" && args.length >= 1) {
+      if (typeof args === "object" && args.length >= 1) {
         for (var selector in args) {
           result += selector + "{";
   
@@ -57,7 +57,7 @@ var JOSH = (function() {
         
         _append(result);
       }
-      else if (typeof args == "string") {
+      else if (typeof args === "string") {
         _append(args);
       }
       else {
