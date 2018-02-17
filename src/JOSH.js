@@ -28,7 +28,7 @@ var JOSH = (function() {
     
     _stylesheet.textContent = css;
     _element.appendChild(_stylesheet);
-  }
+  };
 
   return {
     /** Parses either a string or an object to css.
@@ -38,10 +38,13 @@ var JOSH = (function() {
      * @param {string} [target]
      * @returns {!boolean}
      */
-    parse: function(args, target = "head") {
+    parse(args, target = "head") {
       _target = target.toLowerCase();
-      if (!args) throw new Error();
 
+      if (!args) {
+        throw new Error();
+      }
+      
       var result = "";
       
       if (typeof args === "object" && args.length >= 1) {
@@ -61,7 +64,7 @@ var JOSH = (function() {
         _append(args);
       }
       else {
-        throw new Error()
+        throw new Error();
       }
       return true;
     }
