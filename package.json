@@ -17,5 +17,16 @@
     "babel-preset-minify": "^0.2.0",
     "jest": "^22.2.1",
     "npx": "^9.7.1"
-  }
+  },
+  "keywords": [
+    "josh",
+    "bikossor",
+    "css",
+    "json",
+    "parse",
+    "parser",
+    "javascript",
+    "performance",
+    "vanilla"
+  ]
 }
