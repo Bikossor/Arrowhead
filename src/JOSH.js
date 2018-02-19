@@ -2,13 +2,13 @@
  * @author André Lichtenthäler
  * @license GPL-3.0
  * @name JOSH
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 var JOSH = (function() {
   "use strict";
   
-  var _target, _element, _document = document, _stylesheet = _document.createElement("style");
+  var _target, _element, _document = document, _stylesheet = _document.createElement("style"), _josh = "[JOSH]: ";
 
   /**
    * Appends a css-string to either the head or the body.
@@ -23,7 +23,7 @@ var JOSH = (function() {
       _element = _document.body;
     }
     else {
-      throw new Error();
+      throw new Error(_josh + "Invalid target: " + _target);
     }
     
     _stylesheet.textContent = css;
@@ -42,7 +42,7 @@ var JOSH = (function() {
       _target = target.toLowerCase();
 
       if (!args) {
-        throw new Error();
+        throw new Error(_josh + "No args!");
       }
       
       var result = "";
@@ -64,7 +64,7 @@ var JOSH = (function() {
         _append(args);
       }
       else {
-        throw new Error();
+        throw new Error(_josh + "Wrong type of args: " + typeof args);
       }
       return true;
     }
