@@ -2,7 +2,7 @@
  * @author André Lichtenthäler
  * @license GPL-3.0
  * @name JOSH
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 var JOSH = (function() {

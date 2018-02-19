@@ -65,6 +65,9 @@ I am using [Semantic Versioning 2.0.0](http://semver.org/) for versioning. For t
 This project is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for more details.
 
 ## Changelog
+### Version 1.0.2 (19th February, 2018)
+- [Added] Error messages
+
 ### Version 1.0.1 (17th February, 2018)
 - [Improved] Security patch (Changed ``==`` to ``===`` and ``innerHTML`` to ``textContent``)
 
