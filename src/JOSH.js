@@ -70,4 +70,7 @@ var JOSH = (function() {
     }
   };
 })();
-module.exports = JOSH;
+
+if(typeof module !== "undefined" && module.exports) {
+  module.exports = JOSH;
+}
