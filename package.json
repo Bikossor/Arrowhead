@@ -10,13 +10,14 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "npx babel src/JOSH.js --out-file dist/JOSH.min.js --eval --presets=minify"
+    "build": "gulp"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-minify": "^0.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.1",
     "jest": "^22.2.1",
-    "npx": "^9.7.1"
+    "pump": "^3.0.0"
   },
   "keywords": [
     "josh",

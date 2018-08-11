@@ -32,7 +32,7 @@ var JOSH = (function () {
 		 * @param {string} [target]
 		 * @returns {!boolean}
 		 */
-		parse(args, target) {
+		parse: function(args, target) {
 			target = target || "head";
 			appendToHTMLElement(target);
 
