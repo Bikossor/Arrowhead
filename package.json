@@ -1,12 +1,12 @@
 {
   "author": "André Lichtenthäler",
-  "name": "@bikossor/josh",
+  "name": "arrowhead",
   "description": "A vanilla JavaScript helper to parse JSON into CSS.",
-  "version": "1.0.2",
-  "homepage": "https://github.com/Bikossor/JOSH",
+  "version": "2.0.0",
+  "homepage": "https://github.com/Bikossor/Arrowhead",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Bikossor/JOSH.git"
+    "url": "git://github.com/Bikossor/Arrowhead.git"
   },
   "scripts": {
     "test": "jest",
@@ -20,7 +20,7 @@
     "pump": "^3.0.0"
   },
   "keywords": [
-    "josh",
+    "Arrowhead",
     "bikossor",
     "css",
     "json",

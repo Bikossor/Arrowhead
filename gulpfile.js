@@ -3,7 +3,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var pump = require('pump');
 
-var fileName = "JOSH";
+var fileName = "Arrowhead";
 var folderSource = "src/";
 var folderDestination = "dist/";
 
