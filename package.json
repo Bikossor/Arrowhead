@@ -2,7 +2,8 @@
   "author": "André Lichtenthäler",
   "name": "arrowhead",
   "description": "A vanilla JavaScript helper to parse JSON into CSS.",
-  "version": "2.0.0",
+  "main": "./dist/Arrowhead.min.js",
+  "version": "2.0.1",
   "homepage": "https://github.com/Bikossor/Arrowhead",
   "repository": {
     "type": "git",

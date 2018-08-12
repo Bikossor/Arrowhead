@@ -2,7 +2,7 @@
  * @author André Lichtenthäler
  * @license GPL-3.0
  * @name Arrowhead
- * @version 2.0.0
+ * @version 2.0.1
  */
 
 var Arrowhead = (function () {
