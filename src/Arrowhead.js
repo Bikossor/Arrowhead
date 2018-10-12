@@ -1,11 +1,11 @@
 /**
  * @author André Lichtenthäler
  * @license GPL-3.0
- * @name JOSH
- * @version 1.0.2
+ * @name Arrowhead
+ * @version 2.0.1
  */
 
-var JOSH = (function () {
+var Arrowhead = (function () {
 	"use strict";
 
 	var styleElement = document.createElement("style"),
@@ -32,7 +32,7 @@ var JOSH = (function () {
 		 * @param {string} [target]
 		 * @returns {!boolean}
 		 */
-		parse(args, target) {
+		parse: function(args, target) {
 			target = target || "head";
 			appendToHTMLElement(target);
 
@@ -46,5 +46,5 @@ var JOSH = (function () {
 })();
 
 if (typeof module !== "undefined" && module.exports) {
-	module.exports = JOSH;
+	module.exports = Arrowhead;
 }
