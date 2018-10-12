@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Bikossor/Arrowhead.svg?branch=master)](https://travis-ci.org/Bikossor/Arrowhead)
-[![npm](https://img.shields.io/npm/dt/arrowhead.svg)](https://www.npmjs.com/package/@bikossor/Arrowhead)
+[![npm](https://img.shields.io/npm/dt/arrowhead.svg)](https://www.npmjs.com/package/arrowhead)
 [![GitHub release](https://img.shields.io/github/release/bikossor/Arrowhead.svg)]()
 [![Size](http://img.badgesize.io/https://raw.githubusercontent.com/Bikossor/Arrowhead/master/dist/Arrowhead.min.js.svg)]()
 [![Gzip size](http://img.badgesize.io/https://raw.githubusercontent.com/Bikossor/Arrowhead/master/dist/Arrowhead.min.js.svg?compression=gzip)]()
