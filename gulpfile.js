@@ -12,7 +12,7 @@ gulp.task("build-js", function (callback) {
 		gulp.src(folderSource + "*.js"),
 		uglify(),
 		concat(fileName + ".min.js"),
-        gulp.dest(folderDestination),
+		gulp.dest("docs/assets/js/")
 	], callback);
 });
 
